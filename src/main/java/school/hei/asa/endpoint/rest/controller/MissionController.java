@@ -116,7 +116,7 @@ public class MissionController {
     try (FileWriter fileWriter = new FileWriter(file)) {
       fileWriter.write(
           "code,worker,worker level,start date,"
-              + "end date,contract duration (in days),"
+              + "contract duration (in days),"
               + "total days worked,remaining days"
               + System.lineSeparator());
       fileWriter.flush();
@@ -151,7 +151,7 @@ public class MissionController {
                                     .entranceInstant()
                                     .atZone(ZoneId.of("UTC"))
                                     .toLocalDate()
-                                + ",,"
+                                + ","
                                 + thWorkerLevelHistory.projectedDaysToWork()
                                 + ","
                                 + actualWorkedDays
